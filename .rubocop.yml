@@ -1,0 +1,13 @@
+AllCops:
+  TargetRubyVersion: 2.7.2
+  NewCops: enable
+
+  # RuboCop has a bunch of cops enabled by default. This setting tells RuboCop
+  # to ignore them, so only the ones explicitly set in this file are enabled.
+  Exclude:
+    - '**/tmp/**/*'
+    - '**/templates/**/*'
+    - '**/node_modules/**/*'
+    - '**/config/**/*'
+    - '**/bin/**/*'
+    - '**/db/**/*'
