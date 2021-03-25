@@ -10,6 +10,7 @@ class User < ApplicationRecord
   scope :all_non_admin_users, -> { where.not role: 'admin' }
 
   after_initialize :set_default_role, if: :new_record?
+  after_create :send_reset_password_instructions
   enum role: %I[admin user]
 
   def friendly_password

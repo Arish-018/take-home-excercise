@@ -47,7 +47,12 @@ class UsersController < ApplicationController
   def create
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html do
+          redirect_to @user,
+                      notice: 'User account successfully created.
+                               A password reset email has been sent
+                               to the user.'
+        end
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: 'new' }
