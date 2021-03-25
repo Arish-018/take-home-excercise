@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Take Home Excercise**
 
-Things you may want to cover:
+**Routes**
 
-* Ruby version
+* Sign In
+	[/users/sign_in](http://localhost/)。
+*  Accounts
+	[/admin/users](http://localhost/)。
+*  Accounts Edit
+	[/admin/users/id/edit](http://localhost/)。
+* Reset Password
+	[/users/password/edit?reset_password_token](http://localhost/)。
+* Mailer
+	[/letter_opener](http://localhost/)。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

@@ -19,11 +19,6 @@
         <%= link_to "Login", new_user_session_path, class: "btn btn-outline-primary"%>
       <%end%>
       <% if user_signed_in?%>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <%=link_to 'Accounts', users_path, class: "p-2 text-dark nav-link"%>
-        </li>
-      </ul>
         <ul class="nav navbar-nav justify-content-end">
           <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
