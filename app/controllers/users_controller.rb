@@ -2,13 +2,14 @@
 
 # controllers/users_controller
 class UsersController < ApplicationController
+  before_action :authenticate_user!, :authorize_admin
   before_action :set_user, only: %i[show edit update destroy]
   before_action :initialize_user, only: %i[create]
 
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.all_non_admin_users
 
     respond_to do |format|
       format.html # index.html.erb

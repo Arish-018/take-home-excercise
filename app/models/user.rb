@@ -4,8 +4,11 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable,
          :recoverable, :rememberable, :validatable
+
+  scope :all_non_admin_users, -> { where.not role: 'admin' }
+
   after_initialize :set_default_role, if: :new_record?
   enum role: %I[admin user]
 
