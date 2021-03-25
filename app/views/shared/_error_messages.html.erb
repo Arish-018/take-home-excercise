@@ -1,0 +1,12 @@
+<% if resource.errors.any? %>
+  <div id="error_explanation">
+    <ul class="alert alert-danger">
+      <% resource.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <script type="text/javascript">
+          toastr.error('<%= message %>')
+        </script>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
